@@ -18,20 +18,100 @@ body {
   min-height: 100%;
   width: 100%;
 }
+
+/*----------------------- Nav Bar --------------------------*/
+/* Général */
 .navBar {
+  position: fixed;
   height: 3rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   background: #111;
 }
-nav {
+
+/* Button and Articles */
+.navBar div {
+  display: flex;
+  font-size: 1.2rem;
+}
+.fa-bars {
+  padding: 0.4rem;
+  border-radius: 1rem;
+  margin: 0.5rem 0.5rem;
+  color: #ccc;
+}
+.fa-bars:hover {
+  background: #333;
+  box-shadow: 0 0 0.2rem #aaa;
+  cursor: pointer;
+  color: #ddd;
+}
+.fa-bars:active {
+  background: #a33;
+  box-shadow: 0 0 0.5rem #faa;
+  color: #fff;
+}
+.navBar p {
+  margin: 0.7rem 0;
+}
+
+/* Tabs and Networks */
+/* Tabs */
+.navBar ul {
   display: flex;
 }
-nav ul {
-  display: flex;
+.tabs {
+  min-width: 6rem;
+  padding: 0.8rem 0.5rem;
+  text-align: center;
 }
-nav ul li {
-  padding: 0.4rem 0.2rem;
-  margin: 0.2rem 0;
+.tabs:hover {
+  background: #333;
+  cursor: pointer;
+}
+.tabs:active {
+  background: #a33;
+  text-shadow: 0 0 0.3rem #ccc;
+  font-weight: bold;
+}
+/* Networks */
+a i {
+  padding: 0.4rem;
+  border-radius: 1rem;
+  margin: 0.5rem 0.5rem;
+  color: #ccc;
+}
+a i:hover {
+  background: #333;
+  box-shadow: 0 0 0.2rem #aaa;
+  cursor: pointer;
+  color: #ddd;
+}
+a i:active {
+  background: #a33;
+  box-shadow: 0 0 0.5rem #faa;
+  color: #fff;
+}
+
+/*-------------------------- Side Menu --------------------------*/
+.sideMenu {
+  position: relative;
+  right: 20rem;
+  min-height: 90vh;
+  width: 20rem;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+.sideMenu div {
+  display: flex;
+  font-size: 1.2rem;
+}
+.sideMenu p {
+  margin: 0.7rem 0;
+}
+
+.menuTranslate {
+  transform: translateX(20rem);
 }
