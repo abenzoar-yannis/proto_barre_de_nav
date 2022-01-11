@@ -20,7 +20,6 @@ body {
 }
 
 /*----------------------- Nav Bar --------------------------*/
-/* Général */
 .navBar {
   position: fixed;
   height: 3rem;
@@ -29,38 +28,44 @@ body {
   justify-content: space-between;
   background: #111;
 }
-
-/* Button and Articles */
-.navBar div {
-  display: flex;
-  font-size: 1.2rem;
-}
-.fa-bars {
+/* Button header and networks */
+.navBarButton {
   padding: 0.4rem;
   border-radius: 1rem;
   margin: 0.5rem 0.5rem;
   color: #ccc;
 }
-.fa-bars:hover {
+.navBarButton:hover {
   background: #333;
   box-shadow: 0 0 0.2rem #aaa;
   cursor: pointer;
   color: #ddd;
 }
-.fa-bars:active {
+.navBarButton:active {
   background: #a33;
   box-shadow: 0 0 0.5rem #faa;
   color: #fff;
 }
-.navBar p {
-  margin: 0.7rem 0;
-}
 
-/* Tabs and Networks */
-/* Tabs */
-.navBar ul {
+/*---------- Nav Bar Header ----------*/
+.navBar__header {
   display: flex;
 }
+.navBar__header h2 {
+  margin: 0.7rem 0;
+  font-size: 1rem;
+}
+
+/*---------- Nav Bar Top Menu ----------*/
+.navBar__topMenu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.navBar__topMenu > ul {
+  display: flex;
+}
+/* Tabs */
 .tabs {
   min-width: 6rem;
   padding: 0.8rem 0.5rem;
@@ -75,43 +80,26 @@ body {
   text-shadow: 0 0 0.3rem #ccc;
   font-weight: bold;
 }
-/* Networks */
-a i {
-  padding: 0.4rem;
-  border-radius: 1rem;
-  margin: 0.5rem 0.5rem;
-  color: #ccc;
-}
-a i:hover {
-  background: #333;
-  box-shadow: 0 0 0.2rem #aaa;
-  cursor: pointer;
-  color: #ddd;
-}
-a i:active {
-  background: #a33;
-  box-shadow: 0 0 0.5rem #faa;
-  color: #fff;
-}
 
-/*-------------------------- Side Menu --------------------------*/
-.sideMenu {
-  position: relative;
-  right: 20rem;
-  min-height: 90vh;
+/*---------- Nav Bar Side Menu ----------*/
+.navBar__sideMenu {
+  position: fixed;
+  left: 0;
+  height: 100vh;
   width: 20rem;
   background: #111;
   transition: 0.5s;
   z-index: 2;
+  /* overflow-y: scroll; */
 }
-.sideMenu div {
-  display: flex;
-  font-size: 1.2rem;
+.navBar__sideMenu .navBar__header {
+  position: fixed;
+  width: 18.9rem;
+  background: #111;
 }
-.sideMenu p {
-  margin: 0.7rem 0;
+.navBar__sideMenu ul {
+  margin-top: 4rem;
 }
-
 .menuTranslate {
-  transform: translateX(20rem);
+  transform: translateX(-20rem);
 }
