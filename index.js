@@ -1,11 +1,11 @@
-const sideMenuIn = document.getElementById("sideMenuIn");
-const sideMenuOut = document.getElementById("sideMenuOut");
+// Open and close the side menu --- Variable
+const btnSlide = document.querySelectorAll(".btnSlide");
 const sideMenu = document.querySelector(".navBar__sideMenu");
-const tabs = document.querySelector(".tabs");
 
-sideMenuIn.addEventListener("click", () => {
-  sideMenu.classList.remove("menuTranslate");
-});
-sideMenuOut.addEventListener("click", () => {
-  sideMenu.classList.add("menuTranslate");
+// Open and close the side menu --- Function
+/* In this way, we can add as many buttons to open or close our side menu, as long as the button has the class="btnSlide" */
+btnSlide.forEach((btnSlide) => {
+  btnSlide.addEventListener("click", () => {
+    sideMenu.classList.toggle("menuTranslate");
+  });
 });

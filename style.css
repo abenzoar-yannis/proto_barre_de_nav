@@ -82,6 +82,9 @@ body {
 }
 
 /*---------- Nav Bar Side Menu ----------*/
+.menuTranslate {
+  transform: translateX(-20rem);
+}
 .navBar__sideMenu {
   position: fixed;
   left: 0;
@@ -99,7 +102,4 @@ body {
 }
 .navBar__sideMenu ul {
   margin-top: 4rem;
-}
-.menuTranslate {
-  transform: translateX(-20rem);
 }
